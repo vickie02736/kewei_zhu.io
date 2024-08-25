@@ -1,0 +1,9 @@
+main_works:
+  title: "Main Works"
+  works:
+    - title: "Project Title 1"
+      description: "Description of the first major project. This project focused on innovative techniques in AI and machine learning."
+      image:
+        src: "./asserts/img/Accurate.jpeg"
+        alt: "Image description for Project Title 1"
+        width: 300

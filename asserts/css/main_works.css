@@ -1,0 +1,37 @@
+/* main_works.css */
+#main-works {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.work-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.work-image {
+    flex-shrink: 0;
+}
+
+.work-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}

@@ -85,7 +85,9 @@
             <h1>Publications</h1>
         </div>
         <div class="right-column">
-            <div id="publication-container"></div>
+            <div id="main-works-container"></div>
+            <div id="cooperations-container"></div>
+            <div id="review-papers-container"></div>
         </div>
     </div>
 
@@ -95,10 +97,20 @@
             .then(response => response.text())
             .then(data => document.getElementById('timeline-container').innerHTML = data);
 
-        // Load the publication.html content into the publication-container div
-        fetch('publication.html')
+        // Load the main_works.html content into the main-works-container div
+        fetch('main_works.html')
             .then(response => response.text())
-            .then(data => document.getElementById('publication-container').innerHTML = data);
+            .then(data => document.getElementById('main-works-container').innerHTML += data);
+
+        // Load the cooperations.html content into the cooperations-container div
+        fetch('cooperations.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('cooperations-container').innerHTML += data);
+
+        // Load the review_papers.html content into the review-papers-container div
+        fetch('review_papers.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('review-papers-container').innerHTML += data);
     </script>
 </body>
 </html>
