@@ -1,0 +1,31 @@
+<script id="main-works" type="text/x-yaml">
+cards:
+  - image: "image1.jpg"
+    paragraphs:
+      - "Paragraph 1 for Card 1."
+      - "Paragraph 2 for Card 1."
+      - "Paragraph 3 for Card 1."
+    links:
+      - text: "Link 1"
+        url: "#"
+      - text: "Link 2"
+        url: "#"
+      - text: "Link 3"
+        url: "#"
+      - text: "Link 4"
+        url: "#"
+  - image: "image2.jpg"
+    paragraphs:
+      - "Paragraph 1 for Card 2."
+      - "Paragraph 2 for Card 2."
+      - "Paragraph 3 for Card 2."
+    links:
+      - text: "Link 1"
+        url: "#"
+      - text: "Link 2"
+        url: "#"
+      - text: "Link 3"
+        url: "#"
+      - text: "Link 4"
+        url: "#"
+</script>
