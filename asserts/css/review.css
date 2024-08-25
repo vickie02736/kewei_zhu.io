@@ -1,49 +1,36 @@
-#cooperations {
+#reviews {
     width: 100%;
     max-width: 1200px;
+    width: calc(100% - 20px);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-
-.cooperation-header {
+.review-header {
     width: 100%;
     text-align: left;
 }
 
-.cooperation-item {
+.review-item {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: calc(50% - 10px);
     box-sizing: border-box;
 }
 
-.cooperation-content {
+.review-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.cooperation-text {
+.review-text {
     flex: 1;
-    margin-bottom: 20px;
-}
-
-.cooperation-image {
-    flex-shrink: 0;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.cooperation-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+    margin-right: 0; /* Removed margin to make it centered */
 }

@@ -1,4 +1,4 @@
-#main-works {
+#main-mains {
     width: 100%;
     max-width: 1200px;
     width: calc(100% - 20px);
@@ -8,13 +8,12 @@
     gap: 10px;
 }
 
-
 .main-header {
     width: 100%;
     text-align: left;
 }
 
-.work-item {
+.main-item {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
@@ -24,27 +23,26 @@
     box-sizing: border-box;
 }
 
-.work-content {
+.main-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.work-text {
+.main-text {
     flex: 1;
     margin-right: 20px;
 }
 
-.work-image {
+.main-image {
     flex-shrink: 0;
-    /* flex-grow: 1; */
-    width: 350px;
+    width: 30%;
     margin-left: auto;
     justify-content: center;
 }
 
-.work-image img {
+.main-image img {
     max-width: 100%;
     width: 100%;
     height: auto;
