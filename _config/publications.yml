@@ -1,0 +1,12 @@
+main_works:
+  title: "Our Main Works"
+  works:
+    - title: "Project Title 1"
+      description: "Description of the first major project. This project focused on innovative techniques in AI and machine learning."
+      image: "./asserts/img/Accurate.jpeg"
+      alt: "Image description for Project Title 1"
+    - title: "Project Title 2"
+      description: "Description of the second major project. This project focused on web development and responsive design."
+      image: "./asserts/img/Responsive.jpeg"
+      alt: "Image description for Project Title 2"
+    # Add more projects as needed
