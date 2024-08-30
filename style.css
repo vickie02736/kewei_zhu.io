@@ -5,6 +5,12 @@ body {
     line-height: 1.6;
 }
 
+.page-container {
+    max-width: 1200px; /* Set the desired maximum width for the entire page */
+    margin: 0 auto;    /* Center the container horizontally */
+    padding: 0 20px;   /* Optional padding to prevent content from touching the edges on smaller screens */
+}
+
 header {
     background-color: #333;
     color: #fff;
@@ -15,6 +21,7 @@ header {
 section {
     padding: 20px;
     margin: 20px;
+    position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -37,55 +44,6 @@ ul li {
     border-bottom: 1px solid #ccc;
 }
 
-#personal-introduction-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#personal-introduction {
-    flex: 1;
-    margin-right: 20px;
-}
-
-#rolling-selfie {
-    max-width: 200px;
-}
-
-#rolling-selfie img {
-    display: none;
-    width: 100%;
-    border-radius: 10px;
-}
-
-#rolling-selfie img:first-child {
-    display: block;
-}
-
-.timeline-container {
-    max-height: 300px; /* Adjust this value as needed */
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.timeline-date {
-    flex: 0 0 120px;
-    font-weight: bold;
-    margin-right: 20px;
-    color: #333;
-}
-
-.timeline-description {
-    flex: 1;
-}
-
 .publication-item {
     display: flex;
     justify-content: space-between;
@@ -93,7 +51,7 @@ ul li {
 }
 
 .publication-item img {
-    max-width: 150px;
+    max-width: 400px;
     margin-left: 20px;
 }
 
@@ -146,4 +104,111 @@ ul li {
 .cooperator-info h4 {
     margin: 0;
     margin-bottom: 5px;
+}
+
+.timeline-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 5px; /* Further reduced space between items */
+}
+
+.timeline-date {
+    flex: 0 0 120px;
+    font-weight: bold;
+    margin-right: 10px; /* Reduced space between date and description */
+    color: #333;
+}
+
+.timeline-description {
+    flex: 1;
+    margin: 0; /* Ensure no extra margin in description */
+}
+
+/* Style for the rolling gallery */
+.gallery {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gallery img.active {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .gallery {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        top: 20px;
+    }
+
+    .timeline-date {
+        flex: 0 0 90px;
+    }
+
+    .publication-item, .cooperator-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication-item img, .cooperator-item img {
+        margin: 0 0 10px 0;
+        max-width: 100px;
+    }
+
+    .cooperation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .gallery {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timeline-date {
+        flex: 0 0 70px;
+    }
 }
