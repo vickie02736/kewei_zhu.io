@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#personal-introduction-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#personal-introduction {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#rolling-selfie {
+    max-width: 200px;
+}
+
+#rolling-selfie img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#rolling-selfie img:first-child {
+    display: block;
+}
+
+.timeline-container {
+    max-height: 300px; /* Adjust this value as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.timeline-date {
+    flex: 0 0 120px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #333;
+}
+
+.timeline-description {
+    flex: 1;
+}
+
+.publication-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.publication-item img {
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+.publication-info {
+    flex: 1;
+}
+
+.publication-info h4 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.publication-info p {
+    margin: 5px 0;
+}
+
+.publication-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.cooperation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cooperation-item {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.cooperator-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cooperator-item img {
+    max-width: 100px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.cooperator-info {
+    flex: 1;
+}
+
+.cooperator-info h4 {
+    margin: 0;
+    margin-bottom: 5px;
+}
