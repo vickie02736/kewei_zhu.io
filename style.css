@@ -115,20 +115,20 @@ ul li {
 
 .timeline-item {
     display: flex;
-    align-items: center; /* Center items vertically */
-    margin-bottom: 5px; /* Further reduced space between items */
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .timeline-date {
     flex: 0 0 120px;
     font-weight: bold;
-    margin-right: 10px; /* Reduced space between date and description */
+    margin-right: 10px;
     color: #333;
 }
 
 .timeline-description {
     flex: 1;
-    margin: 0; /* Ensure no extra margin in description */
+    margin: 0;
 }
 
 /* Style for the rolling gallery */
