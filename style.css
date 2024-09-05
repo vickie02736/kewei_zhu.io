@@ -131,26 +131,72 @@ ul li {
     margin: 0;
 }
 
-/* Style for the rolling gallery */
-/* .gallery {
+/* Personal Introduction Section */
+#personal-introduction-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0; /* Add padding for spacing */
+}
+
+/* Intro Content: Left Text and Right Gallery */
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the content takes the full width */
+}
+
+/* Left: Paragraphs */
+.intro-text {
+    flex: 1; /* Allow the text to take up available space */
+    margin-right: 20px;
+}
+
+/* Right: Gallery */
+.gallery {
+    width: 250px; /* Adjust width for better visibility */
+    height: 250px;
     position: relative;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual effect */
 }
 
 .gallery img {
     position: absolute;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Ensure the images cover the gallery area */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
 .gallery img.active {
     opacity: 1;
-} */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gallery {
+        width: 200px; /* Smaller size on mobile */
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        width: 150px; /* Even smaller for very small screens */
+        height: 150px;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
