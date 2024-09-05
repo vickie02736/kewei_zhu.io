@@ -176,6 +176,10 @@ ul li {
     opacity: 1;
 }
 
+.light-icon {
+    color: #f0f0f0; /* Light gray */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .intro-content {
