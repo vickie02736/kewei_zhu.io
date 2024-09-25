@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .page-container {
@@ -178,27 +180,6 @@ ul li {
 
 .light-icon {
     color: #f0f0f0; /* Light gray */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .intro-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .gallery {
-        width: 200px; /* Smaller size on mobile */
-        height: 200px;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        width: 150px; /* Even smaller for very small screens */
-        height: 150px;
-    }
 }
 
 
