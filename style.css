@@ -109,7 +109,7 @@ ul li {
 }
 
 .timeline-container {
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 5px 10px;
