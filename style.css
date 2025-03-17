@@ -87,23 +87,26 @@ ul li {
     margin-bottom: 20px;
 }
 
-.cooperator-item {
+
+.cooperator-container {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .cooperator-item img {
     max-width: 100px;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 50%;
 }
 
-.cooperator-info {
-    flex: 1;
+.cooperator-item {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
-.cooperator-info h4 {
+.cooperator-item h4 {
     margin: 0;
     margin-bottom: 5px;
 }
@@ -122,10 +125,11 @@ ul li {
 }
 
 .timeline-date {
-    flex: 0 0 120px;
+    flex: 0 0 150px;
     font-weight: bold;
     margin-right: 10px;
     color: #333;
+    text-align: center; 
 }
 
 .timeline-description {
@@ -202,7 +206,7 @@ ul li {
         flex: 0 0 90px;
     }
 
-    .publication-item, .cooperator-item {
+    .publication-item, .cooperator-container {
         flex-direction: column;
         align-items: center;
     }
@@ -213,6 +217,11 @@ ul li {
     }
 
     .cooperation-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .cooperator-container {
         flex-direction: column;
         align-items: center;
     }
@@ -239,4 +248,5 @@ ul li {
     .timeline-date {
         flex: 0 0 70px;
     }
+
 }
