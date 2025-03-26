@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
 <div class="page-container">
@@ -43,7 +44,6 @@
                 <div class="gallery">
                     <img src="./img/intro/qqandme.jpg" class="active" alt="My puppy QQ and me">
                     <img src="./img/intro/xmncy.jpg" alt="want bubble tea">
-                    <img src="./img/intro/retroLLM.jpg" alt="Poster: Fine-Tuning Large Language Models for Retrosynthesis">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
         <div class="timeline-container">
             <ul>
                 <li class="timeline-item">
-                    <div class="timeline-date">Mar 2025</div>
+                    <div class="timeline-date">17 Mar 2025</div>
                     <div class="timeline-description">
                         <p>I'm thrilled to share that my registration has been officially upgraded from MPhil stage to PhD stage! 🎉 A huge thank you to everyone who has supported me throughout this journey.✨</p>
                     </div>
@@ -299,6 +299,59 @@
         </ul>
     </section>
 </div>
+
+
+
+<section id="research-gallery">
+    <h2>Gallery</h2>
+    <div class="horizontal-gallery-container">
+        <div class="horizontal-gallery">
+
+            <div class="gallery-item">
+                <img src="./img/gallery/ACSPeerReviewRecognition2023.jpg" alt="Certificate for 2024 ACS Publications peer reviewer">
+                <div class="gallery-caption">
+                    <h4>Certificate for 2024 ACS Publications peer reviewer</h4>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./img/gallery/upgrading.jpg" alt="Confirmation of Intended Award">
+                <div class="gallery-caption">
+                    <h4>Confirmation of Intended Award</h4>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./img/gallery/retroLLM.jpg" alt="Retrosynthesis prediction via Large Language Model">
+                <div class="gallery-caption">
+                    <h4>Poster: Retrosynthesis prediction via Large Language Model</h4>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./img/gallery/molsim2024.jpeg" alt="Attending Molsim-2024 Winter School">
+                <div class="gallery-caption">
+                    <h4>Attending Molsim-2024 Winter School</h4>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+</section>
+
+
+
 </body>
 </html>
 
@@ -315,4 +368,81 @@
     }
 
     setInterval(showNextImage, 3000); // Change image every 3 seconds
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.querySelector('.horizontal-gallery');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    gallery.addEventListener('mousedown', (e) => {
+        isDown = true;
+        gallery.classList.add('active');
+        startX = e.pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+    });
+
+    gallery.addEventListener('mouseleave', () => {
+        isDown = false;
+        gallery.classList.remove('active');
+    });
+
+    gallery.addEventListener('mouseup', () => {
+        isDown = false;
+        gallery.classList.remove('active');
+    });
+
+    gallery.addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 2; // Multiply by 2 to increase scroll speed
+        gallery.scrollLeft = scrollLeft - walk;
+    });
+
+    // Auto-scroll functionality
+    function autoScroll() {
+        if(!isDown) {
+            gallery.scrollLeft += 1;
+            
+            // If reached the end, reset to beginning
+            if(gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+                gallery.scrollLeft = 0;
+            }
+        }
+    }
+
+    setInterval(autoScroll, 50);
+});
+
+// Lightbox Functions
+function openLightbox(img) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    
+    lightboxImg.src = img.src;
+    lightboxCaption.innerHTML = img.alt;
+    lightbox.style.display = "block";
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = "none";
+}
+
+// Close lightbox when clicking outside the image
+window.onclick = function(event) {
+    const lightbox = document.getElementById('lightbox');
+    if (event.target == lightbox) {
+        lightbox.style.display = "none";
+    }
+}
+
+// Add keyboard support for closing lightbox
+document.addEventListener('keydown', function(event) {
+    const lightbox = document.getElementById('lightbox');
+    if (event.key === "Escape" && lightbox.style.display === "block") {
+        closeLightbox();
+    }
+});
 </script>
