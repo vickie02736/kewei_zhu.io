@@ -290,16 +290,113 @@ ul li {
 
 
 /* Responsive Design */
-/* 平板端 (768px以下) */
 @media (max-width: 768px) {
-    body { padding: 0 10px; }
-    .intro-content { flex-direction: column; align-items: center; }
-    .intro-text { margin-right: 0; margin-bottom: 20px; }
+    body {
+        padding: 0 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        top: 20px;
+    }
+
+    .timeline-date {
+        flex: 0 0 90px;
+    }
+
+    .publication-item, .cooperator-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication-item img, .cooperator-item img {
+        margin: 0 0 10px 0;
+        max-width: 100px;
+    }
+
+    .cooperation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cooperator-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal-gallery {
+        display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-item {
+        flex: 0 0 250px;
+    }
+
+    .lightbox-content {
+        width: 95%;
+    }
+
+    .close {
+        font-size: 30px;
+        top: 10px;
+        right: 10px;
+    }
 }
 
-/* 手机端 (480px以下) */
 @media (max-width: 480px) {
-    body { padding: 0 5px; }
-    .intro-content { flex-direction: column; align-items: center; }
-    .intro-text { margin-right: 0; margin-bottom: 15px; text-align: center; }
+    body {
+        padding: 0 5px;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .gallery {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timeline-date {
+        flex: 0 0 70px;
+    }
 }
