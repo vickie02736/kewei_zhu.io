@@ -77,10 +77,11 @@ ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px; /* Add gap between items */
 }
 
 .cooperation-item {
-    flex: 0 0 48%;
+    flex: 0 0 calc(50% - 10px); /* Adjust width to account for gap */
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -134,14 +135,6 @@ ul li {
     margin: 0;
 }
 
-/* Personal Introduction Section */
-#personal-introduction-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px 0; /* Add padding for spacing */
-}
-
 /* Intro Content: Left Text and Right Gallery */
 .intro-content {
     display: flex;
@@ -154,6 +147,10 @@ ul li {
 .intro-text {
     flex: 1; /* Allow the text to take up available space */
     margin-right: 20px;
+}
+
+.intro-text ul li {
+    border-bottom: none; /* Remove border for introduction section bullets */
 }
 
 /* Right: Gallery */
@@ -335,6 +332,11 @@ ul li {
     .cooperation-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .cooperation-item {
+        flex: 0 0 100%; /* Full width on mobile */
+        max-width: 100%;
     }
 
     .cooperator-container {
