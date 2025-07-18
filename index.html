@@ -36,9 +36,11 @@
                 <!-- Left Side: Paragraphs -->
                 <div class="intro-text">
                     <p>I'm a PhD student under the supervision of Prof. Peyman Z Moghadam and Prof. Mojtaba Abdi-Jalebi at University College London (UCL) since 2023.</p>
-                    <p>I am passionate about applying machine learning to advance molecular research, especially in Metal-Organic Frameworks (MOFs). My focus includes:</li>
-                    <li><strong>Data-Driven Quantitative Structure-Property Relationships (QSPR): </strong>Predicting structure-property relationships for efficient material discovery. </li>
-                    <li><strong>Generative AI for material design: </strong> Using deep learning and large language models (LLMs) to create novel MOFs with tailored properties. </li>
+                    <p>I am passionate about applying machine learning to advance molecular research, especially in Metal-Organic Frameworks (MOFs). My focus includes:</p>
+                    <ul>
+                        <li><strong>Data-Driven Quantitative Structure-Property Relationships (QSPR): </strong>Predicting structure-property relationships for efficient material discovery.</li>
+                        <li><strong>Generative AI for material design: </strong> Using deep learning and large language models (LLMs) to create novel MOFs with tailored properties.</li>
+                    </ul>
                 </div>
                 <!-- Right Side: Rolling Gallery -->
                 <div class="gallery">
@@ -166,6 +168,10 @@
 
         <section id="cooperations">
             <h3>Cooperations</h3>
+            <div class="cooperation-container">
+                <div class="cooperation-item">
+                    <div class="publication-item">
+                        <div class="publication-info">
             <ul>
                 <div class="cooperation-container">
                     <div class="cooperation-item">
@@ -200,7 +206,6 @@
                         </div>
                     </div> <!-- Closing cooperation-item div -->
             <!-- Repeat for more cooperative works -->
-            <ul>
             </div> <!-- Closing cooperation-container div -->
         </section> <!-- Correct closing tag for cooperations section -->
 
@@ -316,23 +321,20 @@
             <!-- Repeat for more cooperators -->
         </ul>
     </section>
-</div>
 
-
-
-<section id="research-gallery">
+    <section id="research-gallery">
     <h2>Gallery</h2>
     <div class="horizontal-gallery-container">
         <div class="horizontal-gallery">
 
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/ReadMOF-ARC.jpg" alt="ReadMOF presentation in UCL ARC 2024">
                 <div class="gallery-caption">
                     <h4>ReadMOF presentation</h4>
                     <p></p>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/BZA2025.jpg" alt="Certificate for BZA2025">
                 <div class="gallery-caption">
                     <h4>Certificate for BZA2025</h4>
@@ -340,7 +342,7 @@
                 </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/ACSPeerReviewRecognition2023.jpg" alt="Certificate for 2024 ACS Publications peer reviewer">
                 <div class="gallery-caption">
                     <h4>Certificate for 2024 ACS Publications peer reviewer</h4>
@@ -348,7 +350,7 @@
                 </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/upgrading.jpg" alt="Confirmation of Intended Award">
                 <div class="gallery-caption">
                     <h4>Confirmation of Intended Award</h4>
@@ -356,7 +358,7 @@
                 </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/retroLLM.jpg" alt="Retrosynthesis prediction via Large Language Model">
                 <div class="gallery-caption">
                     <h4>Poster: Retrosynthesis prediction via Large Language Model</h4>
@@ -364,7 +366,7 @@
                 </div>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="./img/gallery/molsim2024.jpeg" alt="Attending Molsim-2024 Winter School">
                 <div class="gallery-caption">
                     <h4>Attending Molsim-2024 Winter School</h4>
@@ -383,7 +385,7 @@
 
 </section>
 
-
+</div>
 
 </body>
 </html>
