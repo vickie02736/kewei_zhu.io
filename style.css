@@ -85,13 +85,21 @@ ul li {
     box-sizing: border-box;
     margin-bottom: 20px;
 }
-
+.cooperator-slider {
+    max-height: 300px;         /* 固定高度，和 timeline 一样的视觉比例 */
+    overflow-y: auto;          /* 竖向滚动 */
+    border: 1px solid #ccc;    /* 边框呼应 timeline */
+    padding: 5px 10px;         /* 内边距 */
+    background: #fff;          /* 可选：与页面背景对齐 */
+}
 .cooperator-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.cooperator-container:last-child {
+    border-bottom: none;
+}
 .cooperator-item img {
     max-width: 100px;
     margin-right: 10px;
