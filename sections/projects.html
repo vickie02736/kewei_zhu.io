@@ -1,65 +1,48 @@
 <section id="research-projects">
-    <h2>Research Projects</h2>
-    
-    <div class="projects-scroll-container">
-        <div class="projects-container">
+    <h2>Selected Projects</h2>
+    <p class="section-intro">These projects represent the current core directions of my research program and are organized by research theme.</p>
 
-        <div class="project-item">
-            <h3>TrumbleMOF</h3>
-            <p><strong>Transformer MLIP for Long-Range Interactions in MOFs</strong></p>
-            <p>TrumbleMOF is a Transformer-based machine learning interatomic potential developed for metal-organic frameworks. The model is designed to capture long-range interactions and complex atomic environments in porous materials, enabling accurate and scalable atomistic simulations for large MOF systems.</p>
-            <p><strong>Technologies:</strong> Transformer Architectures, Machine Learning Interatomic Potentials (MLIPs), Atomistic Simulation, Materials AI</p>
-            <p><strong>Status:</strong> <span class="status-active">Active</span></p>
-        </div>
-
-        <div class="project-item">
-            <h3>Reduced Modelling for Unstructured Mesh</h3>
-            <p><strong>AI-Accelerated Scientific Simulation</strong></p>
-            <p>Developing reduced-order models for simulations on unstructured meshes using dimensionality reduction and data-driven surrogate modelling. The approach aims to approximate high-fidelity numerical simulations with significantly lower computational cost, enabling faster analysis of complex physical systems.</p>
-            <p><strong>Technologies:</strong> Reduced-Order Modelling, Machine Learning, Scientific Computing, High-Performance Computing</p>
-            <p><strong>Status:</strong> <span class="status-active">Active</span></p>
-        </div>
-
-        <div class="project-item">
-            <h3>ML Insight for H₂O Capture Materials Design</h3>
-            <p><strong>ML Insight for H₂O Capture Materials Design</strong></p>
-            <p>Utilizing machine learning insights to design novel H₂O capture materials, integrating predictive modeling with materials synthesis for enhanced adsorption performance and accelerated innovation in water capture technologies.</p>
-            <p><strong>Technologies:</strong> Machine Learning Insights, Explainable AI, Adsorption Modeling, Computational Chemistry</p>
-            <p><strong>Status:</strong> <span class="status-active">Active</span></p>
-        </div>
-
-        <div class="project-item">
-            <h3>BuildMOF</h3>
-            <p><strong>Multimodal Targeted De Novo MOF Generation</strong></p>
-            <p>Developing advanced generative models for multimodal, targeted, and de novo generation of metal-organic frameworks (MOFs). The project integrates multiple data modalities (text, structure, properties) with targeted generation techniques to create novel MOFs with specific desired characteristics, enabling precise and efficient materials discovery.</p>
-            <p><strong>Technologies:</strong> Multimodal AI, Targeted Generative Models, De Novo Design, Computational Chemistry</p>
-            <p><strong>Status:</strong> <span class="status-plan">Planning</span></p>
-        </div>
-
-        <div class="project-item">
-            <h3>ReadMOF</h3>
-            <p><strong>A machine learning model that "reads" MOFs using chemical text (rather than graph structures)</strong></p>
-            <p>The key to ReadMOF lies in the MOF to text construction approach, transforming MOF problems from geometric modeling to language understanding. It naturally aligns with chemical language + graph/geometry interactions.</p>
-            <p><strong>Technologies:</strong> Cheminformatics, Materials Language Modeling, NLP Transformer, Efficient Vector Regression </p>
-            <p><strong>Status:</strong> <span class="status-completed">Completed</span></p>
-        </div>
-
-        <div class="project-item">
-            <h3>P-STMAE</h3>
-            <p><strong>Physics-Informed Spatiotemporal Masked Autoencoder</strong></p>
-            <p>Developing a physics-aware masked autoencoder for efficient spatiotemporal system prediction, combining transformer architectures with physical constraints for improved accuracy and interpretability.</p>
-            <p><strong>Technologies:</strong> Transformers, Masked Autoencoders (MAE), Physics-Informed Neural Networks (PINNs), Spatiotemporal Modeling</p>
-            <p><strong>Status:</strong> <span class="status-completed">Completed</span></p>
-        </div>
-        
-        <div class="project-item">
-            <h3>Generative Models for Microfluidics</h3>
-            <p><strong>Deep Learning for Drop Coalescence Prediction</strong></p>
-            <p>The key challenge of this project is handling imbalanced datasets. Developed generative models and explainable AI frameworks to predict and analyze drop coalescence phenomena in microfluidic devices, addressing data imbalance issues to enable better device design and optimization.</p>
-            <p><strong>Technologies:</strong> Variational Autoencoders (VAE), Explainable AI, Computational Fluid Dynamics, Imbalanced Learning</p>
-            <p><strong>Status:</strong> <span class="status-completed">Completed</span></p>
-        </div>
+    <div class="project-theme-group">
+        <h3>Theme 1: Chemical Representations</h3>
+        <article class="project-item">
+            <h4>ReadMOF</h4>
+            <p><strong>Problem:</strong> Materials ML often depends on structural graphs or handcrafted descriptors, while systematic MOF names contain rich chemical signals that are underused.</p>
+            <p><strong>Approach:</strong> ReadMOF learns language-based representations from chemical nomenclature and combines them with structure information for property prediction.</p>
+            <p><strong>Impact:</strong> The model improves interpretable and scalable screening of framework materials for targeted applications.</p>
+        </article>
     </div>
+
+    <div class="project-theme-group">
+        <h3>Theme 2: Atomistic Machine Learning</h3>
+        <article class="project-item">
+            <h4>TrumbleMOF</h4>
+            <p><strong>Problem:</strong> Conventional interatomic potentials struggle with long-range interactions and flexibility in porous framework materials.</p>
+            <p><strong>Approach:</strong> TrumbleMOF uses transformer architectures to model complex atomic environments and nonlocal interactions in MOFs.</p>
+            <p><strong>Impact:</strong> It enables more accurate and scalable atomistic simulation for materials discovery and analysis.</p>
+        </article>
+
+        <article class="project-item">
+            <h4>BuildMOF</h4>
+            <p><strong>Problem:</strong> De novo discovery of high-performing MOFs remains expensive due to the combinatorial search space.</p>
+            <p><strong>Approach:</strong> BuildMOF explores multimodal and targeted generative modelling to propose candidate structures that satisfy desired constraints.</p>
+            <p><strong>Impact:</strong> The project supports faster design cycles for functional framework materials.</p>
+        </article>
+    </div>
+
+    <div class="project-theme-group">
+        <h3>Theme 3: Surrogate Modelling for Simulation</h3>
+        <article class="project-item">
+            <h4>Reduced Modelling for Unstructured Mesh</h4>
+            <p><strong>Problem:</strong> High-fidelity simulations on unstructured meshes are computationally expensive and limit exploration speed.</p>
+            <p><strong>Approach:</strong> This work develops reduced-order surrogates that learn from numerical simulation data while preserving key physical behaviour.</p>
+            <p><strong>Impact:</strong> It accelerates scientific computing workflows for complex systems.</p>
+        </article>
+
+        <article class="project-item">
+            <h4>P-STMAE</h4>
+            <p><strong>Problem:</strong> Spatiotemporal physical systems are difficult to model when data is sparse and dynamics are multiscale.</p>
+            <p><strong>Approach:</strong> P-STMAE combines masked autoencoding and physics-aware constraints to learn robust temporal representations.</p>
+            <p><strong>Impact:</strong> The framework improves data efficiency and predictive stability for scientific time-series modelling.</p>
+        </article>
     </div>
 </section>
-
