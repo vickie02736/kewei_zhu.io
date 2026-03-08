@@ -1,48 +1,119 @@
 <section id="research-projects">
-    <h2>Selected Projects</h2>
-    <p class="section-intro">These projects represent the current core directions of my research program and are organized by research theme.</p>
+    <h2>Research Themes and Projects</h2>
+    <p class="section-intro">A theme-first view of my research journey, connecting published work with the directions that continue to shape how I think about materials, modelling, and discovery.</p>
 
     <div class="project-theme-group">
-        <h3>Theme 1: Chemical Representations</h3>
-        <article class="project-item">
-            <h4>ReadMOF</h4>
-            <p><strong>Problem:</strong> Materials ML often depends on structural graphs or handcrafted descriptors, while systematic MOF names contain rich chemical signals that are underused.</p>
-            <p><strong>Approach:</strong> ReadMOF learns language-based representations from chemical nomenclature and combines them with structure information for property prediction.</p>
-            <p><strong>Impact:</strong> The model improves interpretable and scalable screening of framework materials for targeted applications.</p>
-        </article>
+        <h3>Theme 1: Learning Chemical Representations of Materials</h3>
+        <p class="theme-summary">This theme studies how chemical language, symbolic descriptions, and structural context can be fused into machine-readable representations for materials discovery.</p>
+
+        <div class="theme-project-flow">
+            <p class="theme-flow-label">Research Continuity</p>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>ReadMOF</h4>
+                    <span class="project-status status-established">Established</span>
+                </div>
+                <p><strong>Research Focus:</strong> New chemical representations that let AI read MOFs through both language and structure.</p>
+                <p><strong>How I Work:</strong> ReadMOF builds language-centered models and aligns them with structure-aware materials modelling.</p>
+                <p><strong>Why It Matters:</strong> It opens a more interpretable and scalable route from chemical description to property prediction.</p>
+            </article>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>BuildiMOF</h4>
+                    <span class="project-status status-preparation">In Preparation</span>
+                </div>
+                <p><strong>Research Focus:</strong> Generative workflows for proposing promising MOF candidates under targeted design goals.</p>
+                <p><strong>How I Work:</strong> Multimodal and conditional generation guided by materials behavior and scientific constraints.</p>
+                <p><strong>Why It Matters:</strong> It extends representation learning from understanding materials to imagining new ones.</p>
+            </article>
+        </div>
+
+        <div class="theme-publications">
+            <h4>Mapped Publications</h4>
+            <ul class="theme-paper-list">
+                <li><a href="https://doi.org/10.1021/acs.jcim.3c01190" target="_blank" rel="noopener noreferrer">Augmented Reality for Enhanced Visualization of MOF Adsorbents</a> - JCIM</li>
+                <li><a href="https://doi.org/10.1039/D2CP05975D" target="_blank" rel="noopener noreferrer">Analyzing drop coalescence in microfluidic devices with a deep learning generative model</a> - PCCP</li>
+            </ul>
+        </div>
     </div>
 
     <div class="project-theme-group">
-        <h3>Theme 2: Atomistic Machine Learning</h3>
-        <article class="project-item">
-            <h4>TrumbleMOF</h4>
-            <p><strong>Problem:</strong> Conventional interatomic potentials struggle with long-range interactions and flexibility in porous framework materials.</p>
-            <p><strong>Approach:</strong> TrumbleMOF uses transformer architectures to model complex atomic environments and nonlocal interactions in MOFs.</p>
-            <p><strong>Impact:</strong> It enables more accurate and scalable atomistic simulation for materials discovery and analysis.</p>
-        </article>
+        <h3>Theme 2: Machine Learning for Atomistic Interactions</h3>
+        <p class="theme-summary">This theme develops scalable models for long-range and complex atomistic interactions, linking modern deep learning architectures to physically meaningful simulation tasks.</p>
 
-        <article class="project-item">
-            <h4>BuildMOF</h4>
-            <p><strong>Problem:</strong> De novo discovery of high-performing MOFs remains expensive due to the combinatorial search space.</p>
-            <p><strong>Approach:</strong> BuildMOF explores multimodal and targeted generative modelling to propose candidate structures that satisfy desired constraints.</p>
-            <p><strong>Impact:</strong> The project supports faster design cycles for functional framework materials.</p>
-        </article>
+        <div class="theme-project-flow">
+            <p class="theme-flow-label">Research Continuity</p>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>TrumbleMOF</h4>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <p><strong>Research Focus:</strong> Rich atomistic learning for porous, flexible, and long-range interacting materials systems.</p>
+                <p><strong>How I Work:</strong> Transformer-based atomistic modelling with geometry-aware context for MOFs.</p>
+                <p><strong>Why It Matters:</strong> It supports more realistic and scalable simulation in materials workflows.</p>
+            </article>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>BuildiMOF (Atomistic Conditioning)</h4>
+                    <span class="project-status status-preparation">In Preparation</span>
+                </div>
+                <p><strong>Research Focus:</strong> Keeping generative materials design chemically meaningful and atomistically grounded.</p>
+                <p><strong>How I Work:</strong> Coupling generative proposals with atomistic constraints and simulation-aware objectives.</p>
+                <p><strong>Why It Matters:</strong> It bridges creative AI generation with physically grounded validation.</p>
+            </article>
+        </div>
+
+        <div class="theme-publications">
+            <h4>Mapped Publications</h4>
+            <ul class="theme-paper-list">
+                <li><a href="https://doi.org/10.1021/acs.jcim.3c01190" target="_blank" rel="noopener noreferrer">Augmented Reality for Enhanced Visualization of MOF Adsorbents</a> - JCIM</li>
+                <li><a href="https://doi.org/10.1039/D3CP00402C" target="_blank" rel="noopener noreferrer">Accurate identification and measurement of the precipitate area by two-stage deep neural networks in novel chromium-based alloys</a> - PCCP</li>
+                <li><a href="https://doi.org/10.1016/j.inffus.2025.103255" target="_blank" rel="noopener noreferrer">Machine learning for modelling unstructured grid data in computational physics: a review</a> - Information Fusion</li>
+            </ul>
+        </div>
     </div>
 
     <div class="project-theme-group">
-        <h3>Theme 3: Surrogate Modelling for Simulation</h3>
-        <article class="project-item">
-            <h4>Reduced Modelling for Unstructured Mesh</h4>
-            <p><strong>Problem:</strong> High-fidelity simulations on unstructured meshes are computationally expensive and limit exploration speed.</p>
-            <p><strong>Approach:</strong> This work develops reduced-order surrogates that learn from numerical simulation data while preserving key physical behaviour.</p>
-            <p><strong>Impact:</strong> It accelerates scientific computing workflows for complex systems.</p>
-        </article>
+        <h3>Theme 3: Surrogate Models for Physical Simulation</h3>
+        <p class="theme-summary">This theme is the methodological backbone of my publication trajectory: from multiphase and microfluidics modelling to reduced simulation and general scientific surrogate learning.</p>
 
-        <article class="project-item">
-            <h4>P-STMAE</h4>
-            <p><strong>Problem:</strong> Spatiotemporal physical systems are difficult to model when data is sparse and dynamics are multiscale.</p>
-            <p><strong>Approach:</strong> P-STMAE combines masked autoencoding and physics-aware constraints to learn robust temporal representations.</p>
-            <p><strong>Impact:</strong> The framework improves data efficiency and predictive stability for scientific time-series modelling.</p>
-        </article>
+        <div class="theme-project-flow">
+            <p class="theme-flow-label">Research Continuity</p>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>Reduced Modelling for Unstructured Mesh</h4>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <p><strong>Research Focus:</strong> Faster scientific simulation on irregular geometries and unstructured meshes.</p>
+                <p><strong>How I Work:</strong> Reduced-order and data-driven surrogate models that preserve the physical character of the system.</p>
+                <p><strong>Why It Matters:</strong> It makes simulation more accessible for exploration, iteration, and downstream scientific use.</p>
+            </article>
+
+            <article class="project-item">
+                <div class="project-item-header">
+                    <h4>P-STMAE</h4>
+                    <span class="project-status status-established">Established</span>
+                </div>
+                <p><strong>Research Focus:</strong> Data-efficient modelling of spatiotemporal scientific systems under physical constraints.</p>
+                <p><strong>How I Work:</strong> Physics-aware masked autoencoding for robust representation learning of dynamics.</p>
+                <p><strong>Why It Matters:</strong> It pushes surrogate modelling toward broader scientific foundation models.</p>
+            </article>
+        </div>
+
+        <div class="theme-publications">
+            <h4>Mapped Publications</h4>
+            <ul class="theme-paper-list">
+                <li><a href="https://doi.org/10.1039/D2CP05975D" target="_blank" rel="noopener noreferrer">Analyzing drop coalescence in microfluidic devices with a deep learning generative model</a> - PCCP</li>
+                <li><a href="https://doi.org/10.1016/j.cej.2023.148465" target="_blank" rel="noopener noreferrer">Explainable AI models for predicting drop coalescence in microfluidics device</a> - CEJ</li>
+                <li><a href="https://doi.org/10.1016/j.ijmultiphaseflow.2024.10" target="_blank" rel="noopener noreferrer">Machine learning and physics-driven modelling and simulation of multiphase systems</a> - International Journal of Multiphase Flow</li>
+                <li><a href="https://doi.org/10.1016/j.inffus.2025.103255" target="_blank" rel="noopener noreferrer">Machine learning for modelling unstructured grid data in computational physics: a review</a> - Information Fusion</li>
+                <li><a href="https://doi.org/10.1039/D3CP00402C" target="_blank" rel="noopener noreferrer">Accurate identification and measurement of the precipitate area by two-stage deep neural networks in novel chromium-based alloys</a> - PCCP</li>
+            </ul>
+        </div>
     </div>
 </section>
