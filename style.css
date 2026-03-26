@@ -533,6 +533,43 @@ ul li {
     text-decoration: underline;
 }
 
+.timeline-item.timeline-upcoming .timeline-description strong.timeline-upcoming-tag {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-description strong.timeline-upcoming-tag {
+    color: #fca5a5;
+}
+
+.timeline-item.timeline-upcoming .timeline-date,
+.timeline-item.timeline-upcoming .timeline-description,
+.timeline-item.timeline-upcoming .timeline-description p {
+    color: #4a148c;
+}
+
+.timeline-item.timeline-upcoming .timeline-description a {
+    color: #5b21b6;
+}
+
+.timeline-item.timeline-upcoming .timeline-description a:hover {
+    color: #6d28d9;
+}
+
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-date,
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-description,
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-description p {
+    color: #d8b4fe;
+}
+
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-description a {
+    color: #e9d5ff;
+}
+
+[data-theme="dark"] .timeline-item.timeline-upcoming .timeline-description a:hover {
+    color: #f5f3ff;
+}
+
 /* Intro Content: Improved Layout */
 .intro-content {
     display: grid;
