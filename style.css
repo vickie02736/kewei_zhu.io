@@ -1435,6 +1435,18 @@ img[loading="lazy"].loaded {
     border-color: var(--card-border);
 }
 
+#research-projects .project-status.status-completed {
+    color: #1b5e20;
+    background: #e8f5e9;
+    border-color: #a5d6a7;
+}
+
+[data-theme="dark"] #research-projects .project-status.status-completed {
+    color: #a5d6a7;
+    background: #1b2e1f;
+    border-color: #2e5c32;
+}
+
 [data-theme="dark"] .status-established {
     color: #f6d893;
     background: #3a2c12;
