@@ -36,8 +36,41 @@
 <div class="page-container">
     <div data-include="sections/header.html"></div>
     
-    <!-- Navigation Menu -->
-    <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+    <!-- Sticky Header (appears on scroll) -->
+    <div class="sticky-header" id="stickyHeader">
+        <div class="sticky-header-top">
+            <div class="sticky-header-info">
+                <h1 class="sticky-name">Kewei Zhu</h1>
+                <div class="sticky-chips">
+                    <span class="header-chip">AI4Science</span>
+                    <span class="header-chip">MOFs</span>
+                    <span class="header-chip">Scientific ML</span>
+                    <span class="header-chip">Multimodal Learning</span>
+                </div>
+            </div>
+            <div class="sticky-social" role="list" aria-label="Social media links">
+                <a href="https://profiles.ucl.ac.uk/95872-kewei-zhu" aria-label="UCL Profile" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fas fa-user"></i></a>
+                <a href="https://www.linkedin.com/in/kewei-zhu-708717196/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=oYTRPhYAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                <button id="sticky-theme-toggle" aria-label="Toggle dark mode" class="theme-toggle-btn">
+                    <i class="fas fa-moon" id="sticky-theme-icon"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="sticky-nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#personal-introduction">About</a></li>
+                <li><a href="#research-projects">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#timelines">Timeline</a></li>
+                <li><a href="#research-gallery">Gallery</a></li>
+                <li><a href="#key-cooperators">Collaborators</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Navigation Menu (original, visible before scroll) -->
+    <nav class="nav-menu" id="originalNav" role="navigation" aria-label="Main navigation">
         <ul>
             <li><a href="#personal-introduction">About</a></li>
             <li><a href="#research-projects">Research</a></li>

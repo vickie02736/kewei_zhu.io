@@ -66,6 +66,7 @@ function initThemeToggle() {
                 html.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
                 updateThemeIcon(newTheme);
+                updateAllThemeIcons(newTheme);
             });
         }
     }, 100);
@@ -267,9 +268,53 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// ===== Sticky Header =====
+function initStickyHeader() {
+    const stickyHeader = document.getElementById('stickyHeader');
+    const originalNav = document.getElementById('originalNav');
+    if (!stickyHeader || !originalNav) return;
+
+    function onScroll() {
+        const navBottom = originalNav.getBoundingClientRect().bottom;
+        if (navBottom <= 0) {
+            stickyHeader.classList.add('visible');
+            originalNav.style.visibility = 'hidden';
+        } else {
+            stickyHeader.classList.remove('visible');
+            originalNav.style.visibility = 'visible';
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const stickyToggle = document.getElementById('sticky-theme-toggle');
+    if (stickyToggle) {
+        stickyToggle.addEventListener('click', function() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateAllThemeIcons(next);
+        });
+    }
+}
+
+function updateAllThemeIcons(theme) {
+    ['theme-icon', 'sticky-theme-icon'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.classList.remove('fa-moon', 'fa-sun');
+        el.classList.add(theme === 'dark' ? 'fa-sun' : 'fa-moon');
+    });
+}
+
+setTimeout(initStickyHeader, 600);
+
 // ===== Navigation Menu =====
 function initNavigation() {
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.nav-menu a, .sticky-nav a');
     const sections = document.querySelectorAll('section[id]');
     
     // Smooth scroll for navigation links

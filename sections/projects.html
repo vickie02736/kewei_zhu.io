@@ -1,92 +1,129 @@
 <section id="research-projects">
     <h2>Research Themes and Projects</h2>
     <div class="project-theme-group">
-        <h3>Theme 1: Chemical Representations of Materials</h3>
+        <h3>Theme 1: AI Meets Experiment and Industry</h3>
+        <p class="theme-summary">How machine learning can close the loop with experimental validation and scale toward real-world industrial applications in materials and chemical engineering.</p>
+
+        <div class="theme-project-flow">
+            <p class="theme-flow-label">Research Continuity</p>
+
+            <details class="project-item">
+                <summary class="project-item-header">
+                    <h4>StableMOF <span class="click-hint-inline">click to expand</span></h4>
+                    <span class="project-status status-progress">In Progress</span>
+                </summary>
+                <p><strong>Research Focus:</strong> Identifying MOFs that remain structurally stable under aqueous and acidic conditions.</p>
+                <p><strong>How I Work:</strong> Machine learning models screen large candidate pools, followed by high-fidelity computational methods to reinforce and validate the shortlisted results.</p>
+                <p><strong>Why It Matters:</strong> Water and acid stability is a prerequisite for real-world MOF deployment, yet most frameworks degrade through hydrolysis of metal-ligand bonds. Rapidly pinpointing robust candidates unlocks applications in water treatment, gas separation under humidity, and industrial catalysis.</p>
+            </details>
+
+            <details class="project-item">
+                <summary class="project-item-header">
+                    <h4>Generative Modelling for Imbalanced Experimental Data</h4>
+                    <span class="project-status status-completed">Completed</span>
+                </summary>
+                <p><strong>Research Focus:</strong> Generating physically consistent synthetic data to augment scarce and imbalanced experimental datasets.</p>
+                <p><strong>How I Work:</strong> Conditional generative models with physics-consistency constraints imposed in the latent space.</p>
+                <p><strong>Why It Matters:</strong> Experiments are expensive, and their outcomes cannot be controlled arbitrarily; as a result, certain regimes are inherently under-represented. Physically grounded data augmentation helps address these gaps without compromising scientific validity.</p>
+            </details>
+        </div>
+
+        <details class="theme-publications">
+            <summary>Mapped Publications <span class="click-hint-inline">click to expand</span></summary>
+            <ul class="theme-paper-list">
+                <li><a href="https://chemrxiv.org/doc/0b063ffc-4c92-4517-b970-2bdeb6401895" target="_blank" rel="noopener noreferrer">ReadMOF: Structure-Free Semantic Embeddings from Systematic MOF Nomenclature for Machine Learning</a> - ChemRxiv</li>
+                <li><a href="https://doi.org/10.1039/D2CP05975D" target="_blank" rel="noopener noreferrer">Analyzing drop coalescence in microfluidic devices with a deep learning generative model</a> - PCCP</li>
+                <li><a href="https://doi.org/10.1016/j.cej.2023.148465" target="_blank" rel="noopener noreferrer">Explainable AI models for predicting drop coalescence in microfluidics device</a> - CEJ</li>
+                <li><a href="https://doi.org/10.1016/j.ijmultiphaseflow.2024.10" target="_blank" rel="noopener noreferrer">Machine learning and physics-driven modelling and simulation of multiphase systems</a> - International Journal of Multiphase Flow</li>
+                <li><a href="https://doi.org/10.1039/D3CP00402C" target="_blank" rel="noopener noreferrer">Accurate identification and measurement of the precipitate area by two-stage deep neural networks in novel chromium-based alloys</a> - PCCP</li>
+            </ul>
+        </details>
+    </div>
+
+    <div class="project-theme-group">
+        <h3>Theme 2: Chemical Representations of Materials</h3>
         <p class="theme-summary">How chemical language, symbolic descriptions, and structural context can be fused into machine-readable representations for materials discovery.</p>
 
         <div class="theme-project-flow">
             <p class="theme-flow-label">Research Continuity</p>
 
-            <article class="project-item">
-                <div class="project-item-header">
+            <details class="project-item">
+                <summary class="project-item-header">
                     <h4>BuildMOF</h4>
                     <span class="project-status status-preparation">In Preparation</span>
-                </div>
+                </summary>
                 <p><strong>Research Focus:</strong> Generative workflows for proposing promising MOF candidates under targeted design goals.</p>
                 <p><strong>How I Work:</strong> Multimodal and conditional generation guided by materials behavior and scientific constraints.</p>
                 <p><strong>Why It Matters:</strong> It extends representation learning from understanding materials to imagining new ones.</p>
-            </article>
+            </details>
 
-            <article class="project-item">
-                <div class="project-item-header">
+            <details class="project-item" open>
+                <summary class="project-item-header">
                     <h4>ReadMOF</h4>
                     <span class="project-status status-completed">Completed</span>
-                </div>
+                </summary>
                 <p><strong>Research Focus:</strong> New chemical representations that let AIs read MOF structure through systematic chemical names, integrated with complementary structural signals.</p>
                 <p><strong>How I Work:</strong> ReadMOF builds language-centered models and aligns them with structure-aware materials modelling.</p>
                 <p><strong>Why It Matters:</strong> It opens a more interpretable and scalable route from chemical description to property prediction.</p>
-            </article>
+                <img class="project-figure" src="./img/papers/ReadMOF2.png" alt="ReadMOF overview diagram">
+            </details>
         </div>
 
-        <div class="theme-publications">
-            <h4>Mapped Publications</h4>
+        <details class="theme-publications">
+            <summary>Mapped Publications</summary>
             <ul class="theme-paper-list">
+                <li><a href="https://chemrxiv.org/doc/0b063ffc-4c92-4517-b970-2bdeb6401895" target="_blank" rel="noopener noreferrer">ReadMOF: Structure-Free Semantic Embeddings from Systematic MOF Nomenclature for Machine Learning</a> - ChemRxiv</li>
                 <li><a href="https://doi.org/10.1021/acs.jcim.3c01190" target="_blank" rel="noopener noreferrer">Augmented Reality for Enhanced Visualization of MOF Adsorbents</a> - JCIM</li>
                 <li><a href="https://doi.org/10.1039/D2CP05975D" target="_blank" rel="noopener noreferrer">Analyzing drop coalescence in microfluidic devices with a deep learning generative model</a> - PCCP</li>
             </ul>
-        </div>
+        </details>
     </div>
 
     <div class="project-theme-group">
-        <h3>Theme 2: Physics on Large-Scale Discrete Systems</h3>
+        <h3>Theme 3: Physics on Large-Scale Discrete Systems</h3>
         <p class="theme-summary">How interaction-driven particle systems and discretization-driven numerical grids can be unified as machine-learned mappings over large discrete representations of physical systems.</p>
 
         <div class="theme-project-flow">
             <p class="theme-flow-label">Research Continuity</p>
 
-            <article class="project-item">
-                <div class="project-item-header">
+            <details class="project-item">
+                <summary class="project-item-header">
                     <h4>TrumbleMOF</h4>
                     <span class="project-status status-progress">In Progress</span>
-                </div>
+                </summary>
                 <p><strong>Research Focus:</strong> Rich atomistic learning for porous, flexible, and long-range interacting materials systems.</p>
                 <p><strong>How I Work:</strong> Transformer-based atomistic modelling with geometry-aware context for MOFs.</p>
                 <p><strong>Why It Matters:</strong> It supports more realistic and scalable simulation in materials workflows.</p>
-            </article>
+            </details>
 
-            <article class="project-item">
-                <div class="project-item-header">
+            <details class="project-item">
+                <summary class="project-item-header">
                     <h4>Reduced Modelling for Unstructured Mesh</h4>
                     <span class="project-status status-progress">In Progress</span>
-                </div>
+                </summary>
                 <p><strong>Research Focus:</strong> Faster scientific simulation on irregular geometries and unstructured meshes.</p>
                 <p><strong>How I Work:</strong> Reduced-order and data-driven surrogate models that preserve the physical character of the system.</p>
                 <p><strong>Why It Matters:</strong> It makes simulation more accessible for exploration, iteration, and downstream scientific use.</p>
-            </article>
+            </details>
 
-            <article class="project-item">
-                <div class="project-item-header">
+            <details class="project-item">
+                <summary class="project-item-header">
                     <h4>P-STMAE</h4>
                     <span class="project-status status-completed">Completed</span>
-                </div>
+                </summary>
                 <p><strong>Research Focus:</strong> Data-efficient modelling of spatiotemporal scientific systems under physical constraints.</p>
                 <p><strong>How I Work:</strong> Physics-aware masked autoencoding for robust representation learning of dynamics.</p>
                 <p><strong>Why It Matters:</strong> It pushes surrogate modelling toward broader scientific foundation models.</p>
-            </article>
+            </details>
         </div>
 
-        <div class="theme-publications">
-            <h4>Mapped Publications</h4>
+        <details class="theme-publications">
+            <summary>Mapped Publications</summary>
             <ul class="theme-paper-list">
                 <li><a href="https://www.sciencedirect.com/science/article/pii/S0167278926000874" target="_blank" rel="noopener noreferrer">Spatiotemporal System Forecasting with Irregular Time Steps via Masked Autoencoder</a> - Physica D</li>
                 <li><a href="https://arxiv.org/abs/2602.15592" target="_blank" rel="noopener noreferrer">Uni-Flow: a unified autoregressive-diffusion model for complex multiscale flows</a> - arXiv</li>
-                <li><a href="https://doi.org/10.1039/D2CP05975D" target="_blank" rel="noopener noreferrer">Analyzing drop coalescence in microfluidic devices with a deep learning generative model</a> - PCCP</li>
-                <li><a href="https://doi.org/10.1016/j.cej.2023.148465" target="_blank" rel="noopener noreferrer">Explainable AI models for predicting drop coalescence in microfluidics device</a> - CEJ</li>
-                <li><a href="https://doi.org/10.1016/j.ijmultiphaseflow.2024.10" target="_blank" rel="noopener noreferrer">Machine learning and physics-driven modelling and simulation of multiphase systems</a> - International Journal of Multiphase Flow</li>
                 <li><a href="https://doi.org/10.1016/j.inffus.2025.103255" target="_blank" rel="noopener noreferrer">Machine learning for modelling unstructured grid data in computational physics: a review</a> - Information Fusion</li>
-                <li><a href="https://doi.org/10.1021/acs.jcim.3c01190" target="_blank" rel="noopener noreferrer">Augmented Reality for Enhanced Visualization of MOF Adsorbents</a> - JCIM</li>
-                <li><a href="https://doi.org/10.1039/D3CP00402C" target="_blank" rel="noopener noreferrer">Accurate identification and measurement of the precipitate area by two-stage deep neural networks in novel chromium-based alloys</a> - PCCP</li>
             </ul>
-        </div>
+        </details>
     </div>
 </section>
