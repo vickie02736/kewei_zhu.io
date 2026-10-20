@@ -18,6 +18,7 @@ async function loadSections() {
   initLazyLoading();
   initNavigation();
   initBackToTop();
+  initFooterYear();
   initThemeToggle();
   initStickyHeader();
   initHorizontalScroll('.projects-scroll-container', false);
@@ -26,6 +27,11 @@ async function loadSections() {
 }
 
 document.addEventListener('DOMContentLoaded', loadSections);
+
+function initFooterYear() {
+  const year = document.getElementById('copyright-year');
+  if (year) year.textContent = new Date().getFullYear();
+}
 
 // ===== Original interactive scripts =====
 let currentImageIndex = 0;
