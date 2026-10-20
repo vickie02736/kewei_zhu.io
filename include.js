@@ -18,6 +18,7 @@ async function loadSections() {
   initLazyLoading();
   initNavigation();
   initBackToTop();
+  initTimelineToggle();
   initFooterYear();
   initThemeToggle();
   initStickyHeader();
@@ -27,6 +28,19 @@ async function loadSections() {
 }
 
 document.addEventListener('DOMContentLoaded', loadSections);
+
+function initTimelineToggle() {
+  const button = document.querySelector('.timeline-toggle');
+  const more = document.getElementById('timeline-more');
+  if (!button || !more) return;
+
+  button.addEventListener('click', () => {
+    const shouldShow = more.hidden;
+    more.hidden = !shouldShow;
+    button.setAttribute('aria-expanded', String(shouldShow));
+    button.textContent = shouldShow ? 'Hide milestones' : 'Show all milestones';
+  });
+}
 
 function initFooterYear() {
   const year = document.getElementById('copyright-year');
