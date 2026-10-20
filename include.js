@@ -47,9 +47,6 @@ function setGalleryCycle() {
   setInterval(showNextImage, 3000);
 }
 
-// Initialize after includes load (a bit later)
-setTimeout(setGalleryCycle, 1000);
-
 // ===== Theme Toggle (Dark Mode) =====
 function initThemeToggle() {
     const html = document.documentElement;
