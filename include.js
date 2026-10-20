@@ -1,28 +1,31 @@
-// Simple client-side include loader
-document.addEventListener('DOMContentLoaded', async () => {
-  const containers = document.querySelectorAll('[data-include]');
-  for (const el of containers) {
+// Load page sections first, then initialise every interaction that depends on them.
+async function loadSections() {
+  const containers = [...document.querySelectorAll('[data-include]')];
+
+  await Promise.all(containers.map(async (el) => {
     const file = el.getAttribute('data-include');
     try {
       const res = await fetch(file);
-      const html = await res.text();
-      el.innerHTML = html;
-      // Mark as loaded for animation
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      el.innerHTML = await res.text();
       el.classList.add('loaded');
-    } catch (e) {
-      el.innerHTML = `<p style="color:red">Failed to load ${file}</p>`;
+    } catch (error) {
+      console.error(`Failed to load ${file}`, error);
+      el.innerHTML = '<p class="include-error">This section could not be loaded.</p>';
     }
-  }
-  
-  // Initialize lazy loading for images after content loads
-  setTimeout(initLazyLoading, 500);
-  // Initialize navigation after content loads
-  setTimeout(initNavigation, 500);
-  // Initialize back to top button
+  }));
+
+  initLazyLoading();
+  initNavigation();
   initBackToTop();
-  // Initialize theme toggle
   initThemeToggle();
-});
+  initStickyHeader();
+  initHorizontalScroll('.projects-scroll-container', false);
+  initGalleryInteractions();
+  setGalleryCycle();
+}
+
+document.addEventListener('DOMContentLoaded', loadSections);
 
 // ===== Original interactive scripts =====
 let currentImageIndex = 0;
@@ -92,23 +95,16 @@ function initThemeToggle() {
     html.setAttribute('data-theme', savedTheme);
 })();
 
-// Also initialize after DOM loads
-document.addEventListener('DOMContentLoaded', initThemeToggle);
-
 // Horizontal gallery drag & auto-scroll (with touch support)
-document.addEventListener('DOMContentLoaded', () => {
-    // Projects horizontal scroll
-    initHorizontalScroll('.projects-scroll-container', false);
-    
-    // Gallery horizontal scroll
+function initGalleryInteractions() {
     const gallery = document.querySelector('.horizontal-gallery');
     if (!gallery) return;
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let startTouchX;
 
-    // Mouse events
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let startTouchX = 0;
+
     gallery.addEventListener('mousedown', (e) => {
         isDown = true;
         gallery.classList.add('active');
@@ -127,14 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gallery.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
+        if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 2;
-        gallery.scrollLeft = scrollLeft - walk;
+        gallery.scrollLeft = scrollLeft - (x - startX) * 2;
     });
 
-    // Touch events for mobile
     gallery.addEventListener('touchstart', (e) => {
         isDown = true;
         gallery.classList.add('active');
@@ -148,24 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gallery.addEventListener('touchmove', (e) => {
-        if(!isDown) return;
+        if (!isDown) return;
         e.preventDefault();
         const x = e.touches[0].pageX - gallery.offsetLeft;
-        const walk = (x - startTouchX) * 2;
-        gallery.scrollLeft = scrollLeft - walk;
+        gallery.scrollLeft = scrollLeft - (x - startTouchX) * 2;
     }, { passive: false });
 
-    // Auto-scroll (disabled on mobile for better UX)
     function autoScroll() {
-        if(!isDown && window.innerWidth > 768) {
+        if (!isDown && window.innerWidth > 768) {
             gallery.scrollLeft += 1;
-            if(gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+            if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
                 gallery.scrollLeft = 0;
             }
         }
     }
+
     setInterval(autoScroll, 50);
-});
+}
 
 // ===== Horizontal Scroll Function (Reusable) =====
 function initHorizontalScroll(selector, autoScrollEnabled = false) {
@@ -310,7 +303,6 @@ function updateAllThemeIcons(theme) {
     });
 }
 
-setTimeout(initStickyHeader, 600);
 
 // ===== Navigation Menu =====
 function initNavigation() {
